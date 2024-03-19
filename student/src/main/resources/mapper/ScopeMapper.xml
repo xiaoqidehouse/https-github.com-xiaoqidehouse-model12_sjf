@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ff.mapper.ScopeMapper">
+
+    <resultMap id="BaseResultMap" type="com.ff.domain.Scope">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="sName" column="s_name" jdbcType="VARCHAR"/>
+            <result property="ms" column="ms" jdbcType="VARCHAR"/>
+            <result property="ks" column="ks" jdbcType="VARCHAR"/>
+            <result property="people" column="people" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,s_name,ms,
+        ks,people
+    </sql>
+</mapper>
