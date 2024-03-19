@@ -1,0 +1,45 @@
+server:
+  port: 9878
+
+spring:
+  application:
+    name: depart
+  datasource:
+    url: jdbc:mysql://localhost:3306/module_sjf?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+  # 邮件配置
+  mail:
+    host: smtp.qq.com
+    port: 587
+    username: 2329856431@qq.com
+    password: dhyvmitpfqrfdjdg      # 授权码
+    protocol: smtp
+
+---
+sms:
+  apiUrl: https://sms_developer.zhenzikj.com
+  appId: 113037
+  appSecret: 5c4d0b8a-60f6-4790-a6fc-2313120258d9
+
+# xxl-job 配置
+xxl:
+  job:
+    admin:
+      # 调度中心地址
+      addresses: http://127.0.0.1:8777/xxl-job-admin
+    accessToken: default_token
+    executor:
+      appname: handlerJob   # 执行器AppName
+      port: 9000      # 执行器端口
+      ip:
+      address:
+      logpath: D:/logs
+      logretentiondays: 30
+
+
+
+
